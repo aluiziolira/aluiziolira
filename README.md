@@ -8,7 +8,7 @@ I build backend systems where correctness, throughput, cost, and observability a
 
 | Area | Work |
 | :--- | :--- |
-| **Backend systems** | 5+ years building backend services, primarily in Python with Go for performance-critical tooling, including platforms handling **120M+ requests/day** and millions of daily database transactions. |
+| **Backend systems** | 5+ years building backend services, primarily in Python with Go for performance-critical tooling, including high-traffic data-extraction and processing platforms. |
 | **Distributed systems** | Event-driven pipelines, async orchestration, Redis Lua atomicity, bounded concurrency, blue-green deployments, failure-aware data processing. |
 | **Cloud & cost engineering** | AWS infrastructure redesign that cut compute spend by **50%**, deployment pipeline time by **70%**, and RDS operating cost by **25%**. |
 | **AI / ML infrastructure** | ML-driven workload optimization in production; agent evaluation, LLM-judge scoring, and trace observability tooling in the projects below. |
@@ -17,12 +17,11 @@ I build backend systems where correctness, throughput, cost, and observability a
 
 ## Production Experience
 
-- **Scale:** Accountable for production scraping and data systems processing **120M+ daily requests** and millions of daily database transactions.
-- **Zero-downtime migration:** Architected the AWS Lambda → ECS Fargate migration for a **120M+ req/day** suite using blue-green deployment, removing timeout and concurrency ceilings and cutting infrastructure cost by **50%**.
-- **Data infrastructure:** Designed a serverless event-driven ETL pipeline (Kinesis → Glue → S3 → Athena) that turns millions of daily JSON error events into queryable Parquet data-lake partitions.
-- **ML in production:** Deployed an SGD-regressor payload-prioritization model that improved extraction rates by **20%**, and a reinforcement-learning multi-armed bandit that improved scraping efficiency by **35%**.
-- **Database operations:** Planned and executed a controlled PostgreSQL RDS major-version upgrade (15 → 18) for a **2M+ records/day** workload, delivering **40% faster** analytical queries and **25% lower** RDS cost through benchmarking, query-plan tuning, and instance right-sizing.
-- **Leadership:** Promoted to Senior after 16 months at mid-level, having rebuilt team practices through **60% turnover**: onboarded a new manager and two developers, and standardized documentation and repository patterns.
+- **Cloud migration:** Architected the AWS Lambda → ECS Fargate migration for a **120M+ req/day** scraping suite: load-tested at scale, cut over blue-green with zero downtime, removed Lambda's timeout and concurrency ceilings, and cut infrastructure cost by **50%**.
+- **Database operations:** Planned and executed a controlled PostgreSQL RDS major-version upgrade (15 → 18) for a 2M+ records/day workload, benchmarking performance before and after cutover: **40% faster** analytical queries and **25% lower** RDS cost through query-plan tuning and instance right-sizing.
+- **Data infrastructure:** Designed a serverless event-driven ETL pipeline (Kinesis → Glue → S3 → Athena) that turns millions of daily JSON error events into queryable Parquet data-lake partitions, replacing ad-hoc log digging with real-time error analysis.
+- **ML in production:** Deployed an SGD-regressor model that prioritizes scraping payloads by predicted value, lifting extraction rates by **20%**, plus a reinforcement-learning multi-armed bandit that automated performance tuning across millions of daily database transactions.
+- **Leadership:** Promoted to Senior after 16 months at mid-level for rebuilding the team through 60% turnover: onboarded a new engineering manager and two developers, grew the team back from 2 to 5 engineers, and standardized documentation templates and repository structure.
 
 ## Featured Projects
 
@@ -57,7 +56,7 @@ Reproducible, benchmark-backed experiments in throughput and memory behavior:
 
 - **[Async Patterns](https://github.com/aluiziolira/async-patterns):** bounded-concurrency HTTP ingestion in Python: sync 130 RPS → async **2,500 RPS** (**20x**), with circuit breakers, retry budgets, connection pooling, and backpressure.
 - **[SQL Throughput Challenge](https://github.com/aluiziolira/sql-throughput-challenge):** PostgreSQL bulk-read strategies compared under Docker resource constraints: multiprocessing at **124K rows/sec** (5.3x baseline); async streaming with **~97% lower** peak memory at 1M rows.
-- **[Go Books Scraper](https://github.com/aluiziolira/go-scrape-books):** bounded-memory scraping ETL in Go: **2.2M items/sec** in-memory pipeline at 4 allocs/op, constant memory regardless of crawl size, Prometheus metrics.
+- **[Go Books Scraper](https://github.com/aluiziolira/go-scrape-books):** bounded-memory scraping ETL in Go: **2.2M items/sec** in-memory pipeline at 4 allocs/op (**108 items/sec** end-to-end over live HTTP, rate limits respected), constant memory regardless of crawl size, Prometheus metrics.
 
 ## Technical Toolbox
 
