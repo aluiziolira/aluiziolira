@@ -60,9 +60,14 @@ A **Python, asyncpg, and PostgreSQL** benchmark comparing bulk-read strategies o
 
 ---
 
-## Certification
+## Certifications & Course Completions
 
-**AWS Certified Machine Learning Engineer – Associate** — active, February 2026–February 2029.
+<p>
+<a href="https://www.credly.com/badges/bf2c4386-88a8-4f25-8fe5-c3573b128273"><img src="https://images.credly.com/images/1a634b4e-3d6b-4a74-b118-c0dcb429e8d2/image.png" alt="AWS Certified Machine Learning Engineer – Associate badge" width="125" height="125"></a>
+</p>
+
+- **AWS:** [Certified Machine Learning Engineer – Associate](https://www.credly.com/badges/bf2c4386-88a8-4f25-8fe5-c3573b128273) — active, February 2026–February 2029.
+- **Anthropic course completions (2026):** [MCP: Advanced Topics](https://verify.skilljar.com/c/89absohofk4b) and [Claude Code in Action](https://verify.skilljar.com/c/bkqqi5i5qns6).
 
 ---
 
