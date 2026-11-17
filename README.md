@@ -48,5 +48,5 @@ Benchmarks **PostgreSQL** bulk reads over one million rows. Multiprocessing reac
 
 ## Contact
 
-- [alumlira@gmail.com](mailto:alumlira@gmail.com)
+- [hi@aluiziolira.dev](mailto:hi@aluiziolira.dev)
 - [linkedin.com/in/aluiziolira](https://linkedin.com/in/aluiziolira)
