@@ -1,50 +1,38 @@
-# Hi, I'm Aluizio Lira
+# Aluízio Lira
 
-**Senior Backend Engineer**
+**Senior Backend Engineer** | Python · AWS · Distributed Systems · PostgreSQL
 
-I build Python services and data pipelines on AWS, from initial design through production. That includes keeping high-volume workloads reliable, improving PostgreSQL performance, and building tools that help engineers investigate issues.
+5+ years in Python and AWS building distributed backend services and high-throughput data pipelines where reliability, latency, and cloud unit economics matter. Beyond architecture and production ownership, I mentor engineers, raise delivery standards, and build AI-assisted workflows with reusable MCP tools.
 
 ## Selected Work
 
-- **AWS migration:** Led a zero-downtime move from Lambda to ECS for infrastructure handling **120M requests/day**, cutting AWS infrastructure costs by **50%**.
-- **Data enrichment:** Designed and shipped a campaign platform in **under four weeks**. Pipeline and workload optimization reduced a 5,000-place campaign from **~20 hours in early runs to ~4 hours in production**.
-- **PostgreSQL:** Upgraded and tuned an Aurora cluster ingesting **2M+ records/day**, with a controlled cutover. Analytical queries ran **40% faster**; instance right-sizing lowered database operating costs by **25%**.
-- **Internal tools:** Built an AI assistant that helps engineers investigate issues using documentation and reusable tools. Also designed an analytics platform for historical metrics and operational reports.
-- **Team leadership:** Onboarded a new manager and two developers after the team shrank from five people to two, and helped standardize development practices.
-- **ML optimization:** Improved extraction rates by **20%** with scikit-learn payload prioritization. A separate multi-armed bandit implementation improved scraping efficiency by **35%**.
+- **Search extraction scaling (`ECS Fargate`, `SQS`, `Aurora PostgreSQL`):** Migrated a throttled search-engine service from Lambda and tuned worker concurrency, autoscaling, caching, and DB hot paths, cutting unit cost **~92%** at **4-8x volume**, median job time from **12.8s to 4.1s**, and backlog wait from **~1.3-2.4h to ~2 min**.
+- **Platform migration (`AWS Lambda → ECS Fargate`):** Drove the move for continuous workers on a **120M+ requests/day** platform (`SQS`, `SNS`, proxy traffic) via gated production load shifts on shared queues with one-parameter rollback and no consumer gap, cutting total AWS costs **~50%**.
+- **Aurora PostgreSQL upgrade (`15.12 → 18.3`):** Led a cross-team upgrade across 33 repos via Terraform and a planned cutover to a fresh cluster (**2M+ records/day**), reclaiming **~75%** initial storage bloat for **~25%** lower monthly DB spend and standardized pooling/alerting.
+- **Infrastructure standardization (`Terraform`, `CI/CD`):** Replaced ad-hoc Serverless Framework and CloudFormation setups with reusable Terraform modules and centralized CI/CD pipelines, cutting deployment times **~70%**.
 
 ## Portfolio
 
-### [Mini Agent Telemetry Lab](https://github.com/aluiziolira/mini-agent-telemetry-lab)
-
-A **Python/Django** backend for collecting AI-agent telemetry. Handles duplicate submissions and processes events asynchronously.
-
-### [Async-Patterns Performance Lab](https://github.com/aluiziolira/async-patterns)
-
-A **Python asyncio** lab comparing synchronous and asynchronous HTTP requests, with concurrency limits, retries, and backpressure. Documented benchmarks: **130 → 2,500 requests/sec**.
-
-### [Go Books Scraper](https://github.com/aluiziolira/go-scrape-books)
-
-A **Go** scraper that uses bounded buffers to keep memory use under control. Its in-memory pipeline benchmark reached **2.2M items/sec**.
-
-### [SQL Throughput Challenge](https://github.com/aluiziolira/sql-throughput-challenge)
-
-Benchmarks **PostgreSQL** bulk reads over one million rows. Multiprocessing reached **124K rows/sec (5.3× the naive baseline)**; a separate async-streaming strategy used **97% less memory**.
+- **[Async-Patterns Performance Lab](https://github.com/aluiziolira/async-patterns):** Python `asyncio` library with bounded concurrency, circuit breakers, jittered backoff, and backpressure queues (**130 to 2,500 req/s** in benchmarks).
+- **[Rate Limit Patterns](https://github.com/aluiziolira/rate-limit-patterns):** Distributed Python rate limiter (Token Bucket, Sliding Window, Leaky Bucket) with atomic **Redis/Lua** `EVALSHA` enforcement and parity contract tests.
+- **[Mini Agent Telemetry Lab](https://github.com/aluiziolira/mini-agent-telemetry-lab):** Framework-agnostic **Django/PostgreSQL** observability backend for AI agents with OTel-style spans, idempotent ingestion, async evaluation, and Prometheus metrics.
+- **[SQL Throughput Challenge](https://github.com/aluiziolira/sql-throughput-challenge):** Reproducible **PostgreSQL** 1M-row bulk-read benchmark (**124K rows/sec** via multiprocessing, **97%** lower peak memory via async streaming cursors).
 
 ## Stack
 
-- **Backend & data:** Python, PostgreSQL, Django, Django REST Framework, FastAPI, asyncio
-- **Cloud & delivery:** AWS (ECS, Lambda, RDS/Aurora, S3), Terraform, Docker, CI/CD
-- **Also used:** Go in portfolio projects; scikit-learn for extraction optimization
+- **Backend:** Python, Django, Django REST Framework, FastAPI, asyncio
+- **Data & persistence:** PostgreSQL, SQLAlchemy, asyncpg, SQL
+- **Cloud & delivery:** AWS (ECS Fargate, Lambda, Aurora/RDS, SQS, SNS, S3, Kinesis, Athena), Terraform, Docker, CI/CD
+- **Also used:** Go in portfolio systems; scikit-learn for workload prioritization
 
 ## Credentials
 
 <p>
-<a href="https://www.credly.com/badges/bf2c4386-88a8-4f25-8fe5-c3573b128273"><img src="https://images.credly.com/images/1a634b4e-3d6b-4a74-b118-c0dcb429e8d2/image.png" alt="AWS Certified Machine Learning Engineer – Associate badge" width="125" height="125"></a>
+<a href="https://www.credly.com/badges/bf2c4386-88a8-4f25-8fe5-c3573b128273"><img src="https://images.credly.com/images/1a634b4e-3d6b-4a74-b118-c0dcb429e8d2/image.png" alt="AWS Certified Machine Learning Engineer - Associate badge" width="125" height="125"></a>
 </p>
 
-- **Certification:** [AWS Certified Machine Learning Engineer – Associate](https://www.credly.com/badges/bf2c4386-88a8-4f25-8fe5-c3573b128273) — valid February 2026–February 2029.
-- **Course completions (2026):** [MCP: Advanced Topics](https://verify.skilljar.com/c/89absohofk4b) and [Claude Code in Action](https://verify.skilljar.com/c/bkqqi5i5qns6).
+- **Certification:** [AWS Certified Machine Learning Engineer - Associate](https://www.credly.com/badges/bf2c4386-88a8-4f25-8fe5-c3573b128273) (valid February 2026 - February 2029)
+- **Course completions (2026):** [MCP: Advanced Topics](https://verify.skilljar.com/c/89absohofk4b) and [Claude Code in Action](https://verify.skilljar.com/c/bkqqi5i5qns6)
 
 ## Contact
 
